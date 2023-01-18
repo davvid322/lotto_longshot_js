@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang = "en-US">
+<head>
+  <meta charset="utf-8f">
+  <meta name = "description" content = "Lottery simulator to test your luck">
+  <meta name="author" content="David Young">
+  <title>Lottery Longshot</title>
+  <link href = "css/lottolongshot.css" rel = "stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Lotto Longshot</h1>
+    <section class="intro">
+      <!-- This is the overview / explanation section -->
+      <div class="overview">
+        <h2>Overview</h2>
+        <p><strong>Welcome to the Lotto Longshot simulator!</strong></p>
+        <p>This lets you run simulations of a lottery similar to Lotto 6/49.  You can choose your own favourite numbers, or let the system Quick-Pick for you.</p>
+        <p>You can run your numbers against one game, or have it run thousands or even millions of games to see how you cumulatively win (unlikely) or lose (almost certainly).</p>
+      </div>
+      <div class="assumptions">
+        <h2>Assumptions:</h2>
+        <table>
+          <tr>
+            <td>Cost of one play:</td>
+            <td>$3.00</td>
+          </tr>
+          <tr>
+            <td>Payoff for 0 / 6:</td>
+            <td>$0.00</td>
+          </tr>
+          <tr>
+            <td>Payoff for 1 / 6:</td>
+            <td>$0.00</td>
+          </tr>
+          <tr>
+            <td>Payoff for 2 / 6:</td>
+            <td>$3.00</td>
+          </tr>  <tr>
+            <td>Payoff for 3 / 6:</td>
+            <td>$10.00</td>
+          </tr>  <tr>
+            <td>Payoff for 4 / 6:</td>
+            <td>$80.00</td>
+          </tr>  <tr>
+            <td>Payoff for 5 / 6:</td>
+            <td>$2,500.00</td>
+          </tr>
+          <tr>
+            <td>Payoff for 6 / 6:</td>
+            <td>$9 Million</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="gamearea">
+      <div class="parmsarea">
+      <form name="parmsform" class="parms" method="post" action="">
+        <p>Choose your 6 lucky number from 1 to 49, how many games to simulate, and
+            whether you want to see each game result, or just a summary of all games.
+            If the number of games is more than 1,000, only summary results are shown.</p>
+        <input id="errmsg" type = "text" hidden></span>
+        <ul>
+          <li class="parms">
+            <input type="button" name="quickpick" id="quickpick" onclick="doQuickPick()"
+                   value="Click here to Quick Pick numbers (Optional)" />
+          </li>
+          <li class="parms">
+		  	    <label for="picks1">Your Numbers</label>
+    	  		<input type="number" name="picks1" id="picks1" required
+                   min="1" max="49" step="1"/>
+  		      <input type="number" name="picks2" id="picks2" required
+                   min="1" max="49" step="1"/>
+            <input type="number" name="picks3" id="picks3" required
+                   min="1" max="49" step="1"/>
+            <input type="number" name="picks4" id="picks4" required
+                   min="1" max="49" step="1"/>
+            <input type="number" name="picks5" id="picks5" required
+                   min="1" max="49" step="1"/>
+            <input type="number" name="picks6" id="picks6" required
+                   min="1" max="49" step="1"/>
+          </li>
+          <li class="parms">
+	    		  <label for="numgames">Number of games to play</label>
+		    	  <input type="number" name="numgames" id="numgames" required
+                    min="1" step="1" value="100"/>
+		      </li>
+          <li class="parms">
+            <fieldset><legend>Level of Detail</legend>
+              <label><input type="radio" id="showdetail" name="levelofdetail"
+                     value="showdetail" checked />Show Each Game</label>
+              <label><input type="radio" id="showsummary" name="levelofdetail"
+                     value="showsummary" />Show Only Summary Statistics</label>
+            </fieldset>
+          </li>
+          <li>
+            <input type="button" name="runsim" id="runsim"
+                    onclick="doRunSim()" value="Run Simulation!">
+          </li>
+        </ul>
+      </form>
+      </div>
+      <div id="resultsarea">
+        <p>Results will be displayed here...</p>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="scripts/lottolongshot.js"> </script>
+</html>

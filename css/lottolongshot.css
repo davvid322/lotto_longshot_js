@@ -1,0 +1,117 @@
+/* Formatting for the Lotto Longshot lottery simulation application */
+
+body {
+  font-family: Helvitaca, Arial, sans-serif;
+}
+header {
+  background: teal;
+  padding-bottom: 10;
+  color: white;
+}
+h1 {
+  text-align: center;
+  font: bold italic 48px;
+  font-family: cursive;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+}
+.intro {
+  display:flex;
+  color: black;
+  margin: 10px;
+  justify-content: center;
+}
+.overview {
+  flex: 0 1 60%;
+  padding: 10px;
+  border: medium solid black;
+  background: white;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  font-size: medium;
+  border-radius: 15px;
+}
+.assumptions {
+  flex: 0 1 25%;
+  padding: 10px;
+  border: medium solid black;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  background: white;
+  border-radius: 7px;
+}
+.gamearea {
+  display:flex;
+}
+.parmsarea {
+  flex: 0 1 35%;
+  padding: 0em;
+  border: medium solid black;
+  margin-right: 30px;
+  background: lightgray;
+}
+#errmsg {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+  color: red;
+  text-decoration: wavy underline;
+  border: none;
+  background-color: lightgray;
+  padding-left: 10px;
+  width: 30em;
+}
+.parms {
+  padding: 10px;
+  font-size: 1em;
+}
+label, legend {
+  display: block;
+  font-weight: bold;
+}
+#quickpick {
+  font-weight: bold;
+  font-size: 1.1em;
+  background-color: lightblue;
+  padding-top: 0em;
+  border-radius: 7px;
+}
+#runsim {
+  font-weight: bold;
+  font-size: 1.3em;
+  background-color: darkseagreen;
+  position: relative;
+  border-radius: 9px;
+  margin-top: 10px;
+}
+#picks1, #picks2, #picks3, #picks4, #picks5, #picks6 {
+	width: 3em;
+}
+#numgames {
+  width: 8em;
+  font-size: 1em;
+}
+ul {
+  list-style: none;
+  display: inline;
+  padding: 0;
+}
+#showdetail, #showsummary {
+  margin: 10px;
+}
+#resultsarea {
+  flex: 0 1 65%;
+  width: auto;
+  height: 460px;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 0.9em;
+  overflow: scroll;
+  border: thin solid black;
+  background: linear-gradient(to right, green, blue);
+  color: white;
+}

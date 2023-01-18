@@ -10,7 +10,7 @@ do a 'quick pick' to generate a random selection for them.
 - The user can specify how many games to simulate, and the system will keep
 track of how many times they got 0, 1, 2...6 correct.
 - At the end the program will produce some summary statistics.
-- If the user chooses 1000 or fewer games, the system will show the details
+- If the user chooses 1000 or fewer games, the system can optionally show the details
 of each game.
-- There is no practical limit to the number of games to simulate.
+- There is no practical limit to the number of games to simulate (large integer).
 - To use this, download the main folder and subfolders to your computer, and then double-click on the index.html file.

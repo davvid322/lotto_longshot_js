@@ -1,5 +1,5 @@
 # lotto_longshot_js
-This is a small system that simulates a lottery, similar to the Lotto 6/49 in Canada.
+This is a small browser-baseed system that simulates a lottery, similar to the Lotto 6/49 in Canada.
 I created this for two reasons:
 1 - To learn Javascript, HTML5, and CSS3, and
 2 - To show the statistical futility of playing lotteries.
